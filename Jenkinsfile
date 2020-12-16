@@ -4,8 +4,10 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
+                sh 'git clone https://github.com/changeweb/Unifiedtransform'
                 sh 'cp .env.example .env'
-                sh './docker-install.sh'
+                sh 'composer install'
+                sh 'composer install --optimize-autoloader --no-dev'
             }
         }
         
