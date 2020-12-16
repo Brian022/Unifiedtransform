@@ -4,9 +4,8 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                sh 'cp .env.example .env'
-                sh 'sudo apt composer install'
                 sh 'composer install'
+                sh 'cp .env.example .env'
                 sh 'composer install --optimize-autoloader --no-dev'
             }
         }
