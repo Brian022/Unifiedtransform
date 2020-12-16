@@ -6,6 +6,7 @@ pipeline {
             steps {
                 sh 'git clone https://github.com/changeweb/Unifiedtransform'
                 sh 'cp .env.example .env'
+                sh 'sudo apt composer install'
                 sh 'composer install'
                 sh 'composer install --optimize-autoloader --no-dev'
             }
