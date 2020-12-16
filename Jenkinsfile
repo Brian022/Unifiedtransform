@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Prepare') {
             steps {
-                sh 'composer install'
+                sh '/personalProjects/Prubea/composer install'
                 sh 'cp .env.example .env'
                 sh 'composer install --optimize-autoloader --no-dev'
             }
