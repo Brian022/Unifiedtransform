@@ -5,7 +5,7 @@ pipeline {
         stage('Prepare') {
             steps {
                 sh 'cp .env.example .env'
-                sh 'composer install --optimize-autoloader --no-dev'
+                sh 'composer install'
             }
         }
         
