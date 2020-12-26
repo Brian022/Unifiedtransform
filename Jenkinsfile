@@ -4,7 +4,7 @@ pipeline {
     stages {        
         stage('Test') {
             steps {
-               sh 'cd personalProjects/Prubea/Unifiedtransform'
+               sh 'cp .env.example .env'
                sh 'composer install'
             }
         }
