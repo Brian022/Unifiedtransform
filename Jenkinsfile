@@ -10,8 +10,7 @@ pipeline {
         }
         stage('Tests') {
             steps {
-               sh 'cd ..'
-               sh 'cd Pipeline'
+               sh '/var/lib/jenkins/workspace/Pipeline'
                sh './vendor/bin/phpunit'
             }
         }
