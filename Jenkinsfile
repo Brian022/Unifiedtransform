@@ -10,7 +10,7 @@ pipeline {
         }
         stage('Tests') {
             steps {
-               sh '/var/lib/jenkins/workspace/Pipeline'
+               sh 'chmod +x -R ${env.WORKSPACE}'
                sh './vendor/bin/phpunit'
             }
         }
