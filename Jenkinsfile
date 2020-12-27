@@ -12,8 +12,8 @@ pipeline {
         }
         stage('Tests') {
             steps {
-               sh "chmod +x -R ${env.Pipeline}"
-               sh './vendor/bin/phpunit'
+               sh "chmod +x -R ${env.Workspace}"
+               sh './Pipeline/vendor/bin/phpunit'
             }
         }
     }   
