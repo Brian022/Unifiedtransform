@@ -6,6 +6,9 @@ pipeline {
             steps {
                sh 'cp .env.example .env'
                sh 'composer install'
+               sh 'php artisan key:generate'
+               sh 'php artisan migrate'
+               sh 'php artisan db:seed'
             }
         }
         stage('Tests') {
