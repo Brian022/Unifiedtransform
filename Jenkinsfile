@@ -8,13 +8,11 @@ pipeline {
                sh 'composer install'
                sh 'php artisan key:generate'
                sh 'php artisan migrate'
-               
-               sh 'php artisan serve'
             }
         }
         stage('Tests') {
             steps {
-               sh "chmod +x -R ${env.WORKSPACE}"
+               sh "chmod +x -R ${env.Pipeline}"
                sh './vendor/bin/phpunit'
             }
         }
