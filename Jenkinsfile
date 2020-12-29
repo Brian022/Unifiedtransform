@@ -11,7 +11,9 @@ pipeline {
             }
         }
         stage('Sonarqube') {
-            echo 'Problemas con Java'
+            steps{
+                echo 'Problemas con Java'
+            }
         }
         stage('Tests') {
             steps {
